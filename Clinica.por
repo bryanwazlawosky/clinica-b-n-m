@@ -4,8 +4,10 @@ programa {
     inteiro n
     escreva("Deseja realizar um cadastro?: (s/n)")
     leia(x)
+
+    enquanto(x == "s"){
      
-    enquanto(x != 6){
+    enquanto(n != 6){
     se(x == "s"){
       escreva("1 - Cadastrar\n")
       escreva("2 - Marcar\n")
@@ -48,5 +50,6 @@ programa {
     }
 
   }
+}
 }
 }
