@@ -10,14 +10,15 @@ programa {
 
     enquanto(x == "s"){
 
-      enquanto(n != 6){
+      enquanto(n != 7){
         se(x == "s"){
-          escreva("1 - Cadastrar\n")
+          escreva("\n1 - Cadastrar\n")
           escreva("2 - Marcar\n")
           escreva("3 - Ver relatório\n")
           escreva("4 - Histórico\n")
           escreva("5 - Excluir\n")
-          escreva("6 - Sair\n")
+          escreva("6 - Excluir horário\n")
+          escreva("7 - Sair\n")
           leia(n)
 
           escolha(n){
@@ -73,6 +74,10 @@ programa {
                 escreva("Nome: ", p, "\n")
                 escreva("Horario: ", horario, "\n")
                 escreva("============")
+
+                se(n == 6){
+                  horario = "Horário excluido!\n"
+                }
               }
               pare
 
@@ -98,7 +103,12 @@ programa {
             escreva("você ainda continua no sistema ")
             pare
            }
-           caso 6: 
+           caso 6:
+           horario == 0
+           escreva("Horári excluido!\n")
+           pare
+
+           caso 7: 
            escreva("você deseja sair do sistema ? (s/n)")
            leia(resposta)
            se(resposta == "s"){
