@@ -2,7 +2,7 @@ programa {
   funcao inicio() {
     cadeia x,p,d
     cadeia historico = "n"
-    cadeia horario = "Nenhum"
+    cadeia horario = "Nenhum", resposta
     inteiro n
 
     escreva("Deseja realizar um cadastro?: (s/n)")
@@ -68,10 +68,12 @@ programa {
               pare
 
             caso 3:
-              escreva("\n===== RELATÓRIO =====\n")
-              escreva("Nome: ", p, "\n")
-              escreva("Horario: ", horario, "\n")
-              escreva("=====================\n")
+              se(p != ""){
+                escreva("\n===== RELATÓRIO =====\n")
+                escreva("Nome: ", p, "\n")
+                escreva("Horario: ", horario, "\n")
+                escreva("============")
+              }
               pare
 
             caso 4:
@@ -84,7 +86,17 @@ programa {
               escreva("=====================\n")
              }
               pare
-
+               caso 5: escreva(" você deseja escluir sua conta (s/n) \n")
+           leia(resposta)
+           se(resposta == "s"){
+            escreva("cliente excluido do sistema")
+            historico = "n"
+            p = ""
+            horario = "nenhum"
+           }
+           senao{
+            escreva("você ainda continua no sistema ")
+           }
           }
         }
       }
