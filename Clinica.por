@@ -96,7 +96,19 @@ programa {
            }
            senao{
             escreva("você ainda continua no sistema ")
+            pare
            }
+           caso 6: 
+           escreva("você deseja sair do sistema ? (s/n)")
+           leia(resposta)
+           se(resposta == "s"){
+            escreva("você saiu do sistema")
+           }
+           senao{
+            escreva("")
+            pare
+           }
+
           }
         }
       }
